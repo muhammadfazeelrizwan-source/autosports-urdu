@@ -1,15 +1,476 @@
-<!doctype html><html lang="ur" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="KhabarDrive — آٹو موبائل، اسپورٹس اور تازہ ترین معلومات اردو میں۔"><title>KhabarDrive | آٹو، اسپورٹس اور تازہ خبریں</title><link rel="stylesheet" href="style.css"></head><body>
-<header><div class="breaking"><div class="container"><b>تازہ ترین:</b> آٹو موبائل، کھیل اور موٹرسپورٹس کی اہم خبریں</div></div><div class="container nav"><a class="brand" href="#home">KHABAR<span>DRIVE</span><small>آٹو • اسپورٹس • نیوز</small></a><button class="menu" onclick="toggleMenu()">☰</button><nav id="nav"><a href="#home">ہوم</a><a href="#latest">تازہ خبریں</a><a href="#cars">کارز</a><a href="#bikes">بائیکس</a><a href="#sports">اسپورٹس</a><a href="#motorsport">موٹرسپورٹس</a><a href="#guides">گائیڈز</a></nav><button class="searchBtn" onclick="openSearch()">🔎</button></div></header>
-<main id="home"><section class="hero container"><div class="hero-main"><span class="label">FEATURED</span><h1>آٹو موبائل اور اسپورٹس کی دنیا کی اہم خبریں ایک جگہ</h1><p>گاڑیوں، بائیکس، کرکٹ، فٹبال اور موٹرسپورٹس سے متعلق مفید اور آسان اردو معلومات۔</p><a class="button" href="#latest">تازہ خبریں پڑھیں</a></div><aside class="hero-side"><div class="mini">🚗<div><b>آٹو موبائل</b><p>ریویوز، فیچرز اور گائیڈز</p></div></div><div class="mini">🏏<div><b>اسپورٹس</b><p>کرکٹ، فٹبال اور مزید</p></div></div><div class="mini">🏎️<div><b>موٹرسپورٹس</b><p>ریسنگ اور کار کلچر</p></div></div></aside></section>
-<section class="container section" id="latest"><div class="section-title"><h2>تازہ خبریں</h2><a href="#">سب دیکھیں →</a></div><div class="cards">
-<article class="card"><div class="photo">🚘</div><div class="card-body"><span>Automobiles</span><h3>نئی گاڑی خریدنے سے پہلے کن چیزوں کو ضرور چیک کریں؟</h3><p>بجٹ، فیول ایوریج، سیفٹی اور مینٹیننس کے اہم نکات۔</p><a href="#">مکمل خبر →</a></div></article>
-<article class="card"><div class="photo">🏍️</div><div class="card-body"><span>Bikes</span><h3>روزمرہ استعمال کی بائیک لیتے وقت اہم باتیں</h3><p>انجن، ایوریج، پارٹس اور مینٹیننس کو سمجھنے کی آسان گائیڈ۔</p><a href="#">مکمل خبر →</a></div></article>
-<article class="card"><div class="photo">🏏</div><div class="card-body"><span>Cricket</span><h3>کرکٹ میچ کے اہم اعداد و شمار کیسے سمجھیں؟</h3><p>رن ریٹ، وکٹیں، اوورز اور پلیئر پرفارمنس کی آسان وضاحت۔</p><a href="#">مکمل خبر →</a></div></article></div></section>
-<section class="section band" id="cars"><div class="container"><div class="section-title"><h2>🚗 آٹو موبائلز</h2><a href="#">مزید →</a></div><div class="category-grid"><a>Car News</a><a>Reviews</a><a>Prices & Specs</a><a>Comparisons</a><a>Electric Cars</a><a>Maintenance</a></div></div></section>
-<section class="container section" id="bikes"><div class="section-title"><h2>🏍️ بائیکس</h2><a href="#">مزید →</a></div><div class="list-grid"><div><b>بائیک ریویوز</b><p>نئے ماڈلز کے فیچرز اور روزمرہ استعمال کی معلومات۔</p></div><div><b>بائیک ٹپس</b><p>مینٹیننس اور بہتر کارکردگی کے مفید طریقے۔</p></div><div><b>موازنہ</b><p>مختلف ماڈلز کے اہم فیچرز کا آسان موازنہ۔</p></div></div></section>
-<section class="section band" id="sports"><div class="container"><div class="section-title"><h2>🏏 اسپورٹس</h2><a href="#">مزید →</a></div><div class="category-grid"><a>Cricket</a><a>Football</a><a>Sports News</a><a>Players</a><a>Schedules</a><a>Results</a></div></div></section>
-<section class="container section" id="motorsport"><div class="section-title"><h2>🏎️ موٹرسپورٹس</h2><a href="#">مزید →</a></div><div class="feature"><div class="feature-icon">🏁</div><div><span>Motorsport</span><h3>ریسنگ کی دنیا: گاڑیوں، ڈرائیورز اور ٹیکنالوجی کو سمجھیں</h3><p>موٹرسپورٹس سے متعلق معلومات، گائیڈز اور دلچسپ حقائق۔</p></div></div></section>
-<section class="section band" id="guides"><div class="container"><div class="section-title"><h2>⭐ ریویوز اور گائیڈز</h2></div><div class="notice"><h3>اصل اور مفید مواد</h3><p>KhabarDrive کا مقصد آسان اردو میں مفید، واضح اور اصل معلومات فراہم کرنا ہے۔ شائع کرنے سے پہلے معلومات قابلِ اعتماد ذرائع سے verify کریں اور اپنی تحریر خود تیار کریں۔</p></div></div></section>
-<section class="container section info-pages"><div><h2>About Us</h2><p>KhabarDrive ایک معلوماتی اردو پلیٹ فارم ہے جو آٹو موبائلز، اسپورٹس اور موٹرسپورٹس سے متعلق خبریں، ریویوز اور گائیڈز پیش کرتا ہے۔</p></div><div><h2>Contact Us</h2><p>Email: your-email@example.com</p></div><div><h2>Privacy Policy</h2><p>اپنی اصل privacy policy یہاں شامل کریں اور شائع کرنے سے پہلے اپنی site کے مطابق اسے مکمل کریں۔</p></div><div><h2>Terms & Conditions</h2><p>اپنی اصل terms یہاں شامل کریں۔</p></div></section></main>
-<footer><div class="container footer"><div class="brand">KHABAR<span>DRIVE</span></div><p>© 2026 KhabarDrive — All rights reserved.</p></div></footer>
-<div id="search" class="searchBox"><button onclick="closeSearch()">✕</button><input id="searchInput" oninput="searchSite()" placeholder="خبر تلاش کریں..."><div id="searchResult"></div></div><script src="script.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <meta name="description" content="KhabarDrive — Automotive, sports, motorsports news, reviews and guides.">
+
+  <title>KhabarDrive | Automotive, Sports & Latest News</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+  <div class="breaking">
+    <div class="container">
+      <b>Breaking:</b> Latest updates from automobiles, sports and motorsports
+    </div>
+  </div>
+
+  <div class="container nav">
+
+    <a class="brand" href="#home">
+      KHABAR<span>DRIVE</span>
+      <small>Auto • Sports • News</small>
+    </a>
+
+    <button class="menu" onclick="toggleMenu()">☰</button>
+
+    <nav id="nav">
+      <a href="#home">Home</a>
+      <a href="#latest">Latest News</a>
+      <a href="#cars">Cars</a>
+      <a href="#bikes">Bikes</a>
+      <a href="#sports">Sports</a>
+      <a href="#motorsport">Motorsports</a>
+      <a href="#guides">Guides</a>
+    </nav>
+
+    <button class="searchBtn" onclick="openSearch()">🔎</button>
+
+  </div>
+
+</header>
+
+
+<main id="home">
+
+  <!-- HERO -->
+
+  <section class="hero container">
+
+    <div class="hero-main">
+
+      <span class="label">FEATURED</span>
+
+      <h1>
+        The Latest Automotive and Sports News, All in One Place
+      </h1>
+
+      <p>
+        Easy-to-understand information about cars, bikes, cricket,
+        football and motorsports.
+      </p>
+
+      <a class="button" href="#latest">
+        Read Latest News
+      </a>
+
+    </div>
+
+
+    <aside class="hero-side">
+
+      <div class="mini">
+        🚗
+        <div>
+          <b>Automobiles</b>
+          <p>Reviews, features and guides</p>
+        </div>
+      </div>
+
+      <div class="mini">
+        🏏
+        <div>
+          <b>Sports</b>
+          <p>Cricket, football and more</p>
+        </div>
+      </div>
+
+      <div class="mini">
+        🏎️
+        <div>
+          <b>Motorsports</b>
+          <p>Racing and car culture</p>
+        </div>
+      </div>
+
+    </aside>
+
+  </section>
+
+
+  <!-- LATEST NEWS -->
+
+  <section class="container section" id="latest">
+
+    <div class="section-title">
+
+      <h2>Latest News</h2>
+
+      <a href="#">View All →</a>
+
+    </div>
+
+
+    <div class="cards">
+
+      <article class="card">
+
+        <div class="photo">🚘</div>
+
+        <div class="card-body">
+
+          <span>Automobiles</span>
+
+          <h3>
+            Things You Should Check Before Buying a New Car
+          </h3>
+
+          <p>
+            Important points about budget, fuel economy, safety and maintenance.
+          </p>
+
+          <a href="#">Read Full Story →</a>
+
+        </div>
+
+      </article>
+
+
+      <article class="card">
+
+        <div class="photo">🏍️</div>
+
+        <div class="card-body">
+
+          <span>Bikes</span>
+
+          <h3>
+            Important Things to Consider When Buying a Daily-Use Bike
+          </h3>
+
+          <p>
+            A simple guide to engines, fuel economy, parts and maintenance.
+          </p>
+
+          <a href="#">Read Full Story →</a>
+
+        </div>
+
+      </article>
+
+
+      <article class="card">
+
+        <div class="photo">🏏</div>
+
+        <div class="card-body">
+
+          <span>Cricket</span>
+
+          <h3>
+            How to Understand Important Cricket Match Statistics
+          </h3>
+
+          <p>
+            An easy explanation of run rate, wickets, overs and player performance.
+          </p>
+
+          <a href="#">Read Full Story →</a>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- CARS -->
+
+  <section class="section band" id="cars">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>🚗 Automobiles</h2>
+
+        <a href="#">More →</a>
+
+      </div>
+
+
+      <div class="category-grid">
+
+        <a>Car News</a>
+        <a>Reviews</a>
+        <a>Prices & Specs</a>
+        <a>Comparisons</a>
+        <a>Electric Cars</a>
+        <a>Maintenance</a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- BIKES -->
+
+  <section class="container section" id="bikes">
+
+    <div class="section-title">
+
+      <h2>🏍️ Bikes</h2>
+
+      <a href="#">More →</a>
+
+    </div>
+
+
+    <div class="list-grid">
+
+      <div>
+        <b>Bike Reviews</b>
+        <p>
+          Features and everyday-use information about new bike models.
+        </p>
+      </div>
+
+      <div>
+        <b>Bike Tips</b>
+        <p>
+          Useful maintenance tips for better performance.
+        </p>
+      </div>
+
+      <div>
+        <b>Comparisons</b>
+        <p>
+          Easy comparisons of important features between different models.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SPORTS -->
+
+  <section class="section band" id="sports">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>🏏 Sports</h2>
+
+        <a href="#">More →</a>
+
+      </div>
+
+
+      <div class="category-grid">
+
+        <a>Cricket</a>
+        <a>Football</a>
+        <a>Sports News</a>
+        <a>Players</a>
+        <a>Schedules</a>
+        <a>Results</a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- MOTORSPORT -->
+
+  <section class="container section" id="motorsport">
+
+    <div class="section-title">
+
+      <h2>🏎️ Motorsports</h2>
+
+      <a href="#">More →</a>
+
+    </div>
+
+
+    <div class="feature">
+
+      <div class="feature-icon">🏁</div>
+
+      <div>
+
+        <span>Motorsport</span>
+
+        <h3>
+          The World of Racing: Cars, Drivers and Technology
+        </h3>
+
+        <p>
+          Information, guides and interesting facts about motorsports.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- GUIDES -->
+
+  <section class="section band" id="guides">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>⭐ Reviews & Guides</h2>
+
+      </div>
+
+
+      <div class="notice">
+
+        <h3>Original & Useful Content</h3>
+
+        <p>
+          KhabarDrive aims to provide useful, clear and original information.
+          Always verify important information from reliable sources before publishing.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- INFORMATION PAGES -->
+
+  <section class="container section info-pages">
+
+    <div>
+
+      <h2>About Us</h2>
+
+      <p>
+        KhabarDrive is an information platform covering automobiles,
+        sports and motorsports through news, reviews and useful guides.
+      </p>
+
+      <a href="about.html">Read More →</a>
+
+    </div>
+
+
+    <div>
+
+      <h2>Contact Us</h2>
+
+      <p>
+        Have a question or suggestion? Visit our Contact page to get in touch.
+      </p>
+
+      <a href="contact.html">Contact Us →</a>
+
+    </div>
+
+
+    <div>
+
+      <h2>Privacy Policy</h2>
+
+      <p>
+        Learn how KhabarDrive handles privacy and user information.
+      </p>
+
+      <a href="privacy.html">Read Privacy Policy →</a>
+
+    </div>
+
+
+    <div>
+
+      <h2>Terms & Conditions</h2>
+
+      <p>
+        Read the terms and conditions for using the KhabarDrive website.
+      </p>
+
+      <a href="terms.html">Read Terms →</a>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="container footer">
+
+    <div class="brand">
+      KHABAR<span>DRIVE</span>
+    </div>
+
+    <p>
+      © 2026 KhabarDrive — All rights reserved.
+    </p>
+
+
+    <div class="footer-links">
+
+      <a href="about.html">About Us</a>
+
+      <a href="contact.html">Contact Us</a>
+
+      <a href="privacy.html">Privacy Policy</a>
+
+      <a href="terms.html">Terms & Conditions</a>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+<!-- SEARCH -->
+
+<div id="search" class="searchBox">
+
+  <button onclick="closeSearch()">✕</button>
+
+  <input
+    id="searchInput"
+    oninput="searchSite()"
+    placeholder="Search news..."
+  >
+
+  <div id="searchResult"></div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
