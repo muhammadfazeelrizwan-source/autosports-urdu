@@ -1,8 +1,10 @@
-/* ================================
-   KHABARDRIVE — FINAL LIGHT THEME
-   ================================ */
+/* =========================================================
+   KHABARDRIVE - PROFESSIONAL NEWS WEBSITE
+   ========================================================= */
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -11,503 +13,1137 @@ html {
 }
 
 body {
-  margin: 0;
-  background: #f1f5f9;
-  color: #172033;
-  font-family: Arial, "Noto Nastaliq Urdu", sans-serif;
-  line-height: 1.7;
-}
-
-/* ================================
-   GLOBAL
-   ================================ */
-
-.container {
-  width: min(1180px, 92%);
-  margin: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f8fc;
+  color: #10254a;
+  line-height: 1.5;
 }
 
 a {
-  transition: all 0.25s ease;
+  text-decoration: none;
+  color: inherit;
 }
 
-button {
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input {
   font-family: inherit;
 }
 
-/* ================================
-   BREAKING NEWS
-   ================================ */
 
-.breaking {
-  background: #173b5f;
-  color: #fff;
+/* =========================================================
+   TOP BAR
+   ========================================================= */
+
+.top-bar {
+  min-height: 43px;
+  background: #062452;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4.5%;
+  font-size: 14px;
+}
+
+.top-left,
+.top-right {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.top-right {
+  gap: 13px;
+}
+
+.top-right > span {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.search-box {
+  height: 31px;
+  width: 285px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.15);
+  display: flex;
+  align-items: center;
+  padding-left: 14px;
+  margin-left: 5px;
+}
+
+.search-box input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: white;
   font-size: 13px;
-  border-bottom: 1px solid #285b86;
 }
 
-.breaking .container {
-  padding: 7px 0;
+.search-box input::placeholder {
+  color: rgba(255,255,255,0.85);
 }
 
-.breaking b {
-  background: #2f80c9;
-  padding: 4px 10px;
-  border-radius: 4px;
-  margin-right: 7px;
+.search-box button {
+  border: none;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  padding: 5px 12px;
 }
 
-/* ================================
-   HEADER
-   ================================ */
 
-.site-header,
-header {
-  background: rgba(255, 255, 255, 0.97);
-  position: sticky;
-  top: 0;
-  z-index: 20;
-  box-shadow: 0 3px 20px rgba(23, 59, 95, 0.08);
-  backdrop-filter: blur(10px);
+/* =========================================================
+   MAIN HEADER
+   ========================================================= */
+
+.main-header {
+  min-height: 91px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4.5%;
+  border-bottom: 1px solid #e6ebf3;
 }
 
-.nav {
-  min-height: 78px;
+.logo-area {
+  width: 330px;
+  display: flex;
+  align-items: center;
+}
+
+.logo-area a {
+  display: block;
+}
+
+.logo-area img {
+  width: 300px;
+  max-height: 76px;
+  object-fit: contain;
+}
+
+.main-nav {
   display: flex;
   align-items: center;
   gap: 25px;
 }
 
-/* ================================
-   KHABARDRIVE LOGO
-   ================================ */
-
-.brand {
+.main-nav a {
   position: relative;
-  font-weight: 900;
-  font-size: 27px;
-  color: #173b5f;
-  text-decoration: none;
-  line-height: 1;
-  direction: ltr;
-  display: inline-flex;
-  align-items: center;
-  gap: 9px;
-  white-space: nowrap;
-}
-
-/* Automotive logo mark */
-
-.brand::before {
-  content: "➤";
-  width: 39px;
-  height: 39px;
-  border: 3px solid #2f80c9;
-  border-radius: 50%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: #2f80c9;
-  font-size: 18px;
-  transform: rotate(-15deg);
-  box-shadow: inset 0 0 0 4px #edf6fc;
-}
-
-/* DRIVE color */
-
-.brand span {
-  color: #2f80c9;
-}
-
-/* Tagline */
-
-.brand small {
-  position: absolute;
-  left: 48px;
-  bottom: -13px;
-  font-size: 8px;
-  color: #64748b;
-  letter-spacing: 1.2px;
-  font-weight: 700;
-  white-space: nowrap;
-}
-
-/* ================================
-   NAVIGATION
-   ================================ */
-
-.nav nav {
   display: flex;
-  gap: 19px;
-  flex: 1;
-  justify-content: center;
-}
-
-.nav nav a {
-  position: relative;
-  color: #334155;
-  text-decoration: none;
+  align-items: center;
+  gap: 6px;
+  height: 91px;
+  color: #11264d;
+  font-size: 15px;
   font-weight: 700;
-  font-size: 14px;
-  padding: 28px 2px 25px;
+  white-space: nowrap;
+  transition: 0.2s ease;
 }
 
-.nav nav a::after {
+.main-nav a:hover,
+.main-nav a.active {
+  color: #0879ed;
+}
+
+.main-nav a.active::after {
   content: "";
   position: absolute;
+  height: 3px;
+  background: #0879ed;
   left: 0;
   right: 0;
-  bottom: 17px;
-  height: 2px;
-  background: #2f80c9;
-  transform: scaleX(0);
-  transition: transform 0.25s ease;
+  bottom: 0;
+  border-radius: 4px 4px 0 0;
 }
 
-.nav nav a:hover {
-  color: #2f80c9;
-}
-
-.nav nav a:hover::after {
-  transform: scaleX(1);
-}
-
-/* ================================
-   BUTTONS
-   ================================ */
-
-.searchBtn,
-.menu {
-  border: 0;
-  background: #eef5fa;
-  color: #173b5f;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  font-size: 20px;
-  cursor: pointer;
-  transition: all 0.25s ease;
-}
-
-.searchBtn:hover,
-.menu:hover {
-  background: #dcecf7;
-  transform: translateY(-2px);
-}
-
-.menu {
+.menu-toggle {
   display: none;
+  border: none;
+  background: #0879ed;
+  color: white;
+  font-size: 22px;
+  width: 43px;
+  height: 40px;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
-/* ================================
-   HERO
-   ================================ */
 
-.hero {
-  margin-top: 30px;
+/* =========================================================
+   BREAKING NEWS
+   ========================================================= */
+
+.breaking-wrapper {
+  width: 91%;
+  margin: 13px auto 18px;
+  min-height: 39px;
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+  border-radius: 7px;
+  background: #eaf1fb;
+}
+
+.breaking-title {
+  min-width: 137px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ec172c;
+  color: white;
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.breaking-news {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 25px;
+  overflow: hidden;
+  padding: 0 15px;
+  color: #193b6d;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.breaking-news span {
+  white-space: nowrap;
+}
+
+.breaking-news span::first-letter {
+  color: #ec172c;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero-section {
+  width: 91%;
+  margin: 0 auto 20px;
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 20px;
+  grid-template-columns: minmax(0, 2.25fr) minmax(290px, 0.8fr);
+  gap: 12px;
 }
 
 .hero-main {
   position: relative;
+  min-height: 370px;
   overflow: hidden;
-  min-height: 410px;
-  border-radius: 20px;
-  padding: 55px;
-  color: #fff;
-
-  background:
-    radial-gradient(circle at 85% 25%, rgba(67, 145, 205, 0.35), transparent 35%),
-    linear-gradient(135deg, #173b5f 0%, #245d87 55%, #2f80c9 100%);
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  box-shadow: 0 15px 40px rgba(23, 59, 95, 0.18);
-  animation: fadeUp 0.7s ease both;
+  border-radius: 13px;
+  background: #092a52;
 }
 
-/* Decorative automotive lines */
+.hero-image {
+  width: 100%;
+  height: 370px;
+  object-fit: cover;
+}
 
 .hero-main::after {
   content: "";
   position: absolute;
-  right: -80px;
-  bottom: 25px;
-  width: 320px;
-  height: 100px;
-  border-top: 2px solid rgba(255,255,255,0.18);
-  border-bottom: 2px solid rgba(255,255,255,0.12);
-  transform: skewX(-25deg);
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(3, 24, 51, 0.92) 0%,
+      rgba(3, 24, 51, 0.72) 32%,
+      rgba(3, 24, 51, 0.12) 78%,
+      rgba(3, 24, 51, 0.08) 100%
+    );
 }
 
-.label,
-.card-body span,
-.feature span {
-  color: #2f80c9;
-  font-weight: 800;
-  font-size: 12px;
-}
-
-.hero-main .label {
-  color: #dcefff;
-  background: rgba(255,255,255,0.13);
-  width: fit-content;
-  padding: 5px 11px;
-  border-radius: 5px;
-  letter-spacing: 0.5px;
-}
-
-.hero h1 {
-  position: relative;
+.hero-overlay {
+  position: absolute;
   z-index: 2;
-  font-size: 43px;
-  line-height: 1.25;
-  margin: 13px 0;
-  max-width: 720px;
+  left: 30px;
+  bottom: 27px;
+  width: 57%;
+  color: white;
 }
 
-.hero p {
-  position: relative;
-  z-index: 2;
-  color: #e6f1f8;
-  font-size: 17px;
-  max-width: 650px;
-}
-
-.button {
-  position: relative;
-  z-index: 2;
-  align-self: flex-start;
-  margin-top: 10px;
-  background: #fff;
-  color: #173b5f;
-  text-decoration: none;
-  padding: 10px 22px;
+.category-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 14px;
   border-radius: 7px;
+  font-size: 12px;
   font-weight: 800;
-  box-shadow: 0 7px 20px rgba(0,0,0,0.12);
+  margin-bottom: 13px;
 }
 
-.button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+.sports-badge {
+  background: #0879ed;
 }
 
-/* ================================
-   HERO SIDE
-   ================================ */
+.hero-overlay h1 {
+  font-size: 34px;
+  line-height: 1.12;
+  margin-bottom: 11px;
+}
+
+.hero-overlay p {
+  font-size: 14px;
+  line-height: 1.55;
+  color: #edf5ff;
+  max-width: 650px;
+  margin-bottom: 16px;
+}
+
+.read-button {
+  display: inline-flex;
+  align-items: center;
+  background: #ed172b;
+  color: white;
+  padding: 10px 21px;
+  border-radius: 24px;
+  font-size: 14px;
+  font-weight: 800;
+  transition: 0.2s ease;
+}
+
+.read-button:hover {
+  background: #c90d20;
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   HERO SIDE STORIES
+   ========================================================= */
 
 .hero-side {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.side-story {
+  min-height: 112px;
+  background: white;
+  border-radius: 12px;
+  padding: 10px;
   display: grid;
-  gap: 18px;
-}
-
-.mini {
-  background: #fff;
-  border: 1px solid #dce6ee;
-  border-radius: 15px;
-  padding: 25px;
-  display: flex;
-  gap: 15px;
+  grid-template-columns: 115px 1fr;
+  gap: 12px;
   align-items: center;
-  font-size: 43px;
-  box-shadow: 0 7px 22px rgba(23, 59, 95, 0.06);
-  transition: all 0.3s ease;
+  border: 1px solid #e5ebf4;
+  box-shadow: 0 2px 8px rgba(15, 45, 80, 0.06);
+  transition: 0.2s ease;
 }
 
-.mini:hover {
-  transform: translateY(-5px);
-  border-color: #9bc7e5;
-  box-shadow: 0 13px 30px rgba(23, 59, 95, 0.11);
+.side-story:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(15, 45, 80, 0.1);
 }
 
-.mini b {
-  font-size: 19px;
-  color: #173b5f;
+.side-story img {
+  width: 115px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 7px;
 }
 
-.mini p {
-  font-size: 13px;
-  color: #64748b;
-  margin: 2px 0;
+.side-story h3 {
+  color: #122b55;
+  font-size: 14px;
+  line-height: 1.3;
+  margin: 4px 0 7px;
 }
 
-/* ================================
-   SECTIONS
-   ================================ */
-
-.section {
-  padding: 58px 0;
+.side-story small {
+  color: #71809b;
+  font-size: 11px;
 }
 
-.section-title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 23px;
-}
-
-.section-title h2 {
-  position: relative;
-  font-size: 27px;
-  margin: 0;
-  color: #173b5f;
-}
-
-.section-title h2::before {
-  content: "";
-  display: inline-block;
-  width: 5px;
-  height: 24px;
-  background: #2f80c9;
-  border-radius: 5px;
-  margin-right: 9px;
-  vertical-align: -3px;
-}
-
-.section-title a {
-  color: #2f80c9;
-  text-decoration: none;
+.small-category {
+  font-size: 10px;
   font-weight: 800;
 }
 
-.section-title a:hover {
-  color: #173b5f;
+.automobile-text {
+  color: #0879ed;
 }
 
-/* ================================
-   NEWS CARDS
-   ================================ */
+.bikes-text {
+  color: #6738d8;
+}
 
-.cards {
+.motorsport-text {
+  color: #e51b2e;
+}
+
+
+/* =========================================================
+   CATEGORY CARDS
+   ========================================================= */
+
+.category-grid {
+  width: 91%;
+  margin: 0 auto 27px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
 }
 
-.card {
-  background: #fff;
-  border-radius: 15px;
+.category-card {
+  background: white;
+  min-height: 108px;
+  border-radius: 11px;
+  border: 1px solid #e1e8f2;
+  display: grid;
+  grid-template-columns: 112px 1fr;
   overflow: hidden;
-  border: 1px solid #dfe7ee;
-  box-shadow: 0 5px 18px rgba(23, 59, 95, 0.05);
-  transition: all 0.3s ease;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(20, 50, 90, 0.04);
+  transition: 0.2s ease;
 }
 
-.card:hover {
-  transform: translateY(-6px);
-  border-color: #b5d4e8;
-  box-shadow: 0 15px 30px rgba(23, 59, 95, 0.11);
+.category-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 18px rgba(20, 50, 90, 0.1);
 }
 
-.photo {
-  height: 165px;
-  background:
-    linear-gradient(135deg, #dcecf7, #edf4f8);
+.category-card > img {
+  width: 112px;
+  height: 108px;
+  object-fit: cover;
+}
+
+.category-content {
+  padding: 16px 34px 12px 11px;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.category-icon {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 65px;
-}
-
-.card-body {
-  padding: 20px;
-}
-
-.card-body span {
-  color: #2f80c9;
-}
-
-.card-body h3 {
-  color: #172033;
-  font-size: 19px;
-  line-height: 1.5;
-  margin: 7px 0;
-}
-
-.card-body p {
-  color: #64748b;
   font-size: 14px;
 }
 
-.card-body a {
-  color: #2f80c9;
-  text-decoration: none;
-  font-weight: 800;
+.blue-icon {
+  background: #e8f3ff;
 }
 
-.card-body a:hover {
-  color: #173b5f;
+.cyan-icon {
+  background: #e4fbff;
 }
 
-/* ================================
-   BLUE SECTION BANDS
-   ================================ */
-
-.band {
-  background: #e8f1f7;
-  max-width: none;
-  border-top: 1px solid #d7e5ee;
-  border-bottom: 1px solid #d7e5ee;
+.orange-icon {
+  background: #fff3df;
 }
 
-.band > .container {
-  width: min(1180px, 92%);
+.red-icon {
+  background: #ffe8ea;
 }
 
-/* ================================
-   CATEGORY GRID
-   ================================ */
+.category-content h3 {
+  font-size: 16px;
+  margin-bottom: 4px;
+  color: #102b58;
+}
 
-.category-grid {
+.category-content p {
+  color: #70809c;
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+.arrow {
+  position: absolute;
+  right: 10px;
+  bottom: 15px;
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  background: #0879ed;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+.content-wrapper {
+  width: 91%;
+  margin: 0 auto 35px;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 13px;
+  grid-template-columns: minmax(0, 3fr) minmax(270px, 1fr);
+  gap: 25px;
 }
 
-.category-grid a {
-  background: #fff;
-  padding: 17px 10px;
-  text-align: center;
+.section-heading {
+  min-height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.section-heading h2 {
+  font-size: 22px;
+  color: #102b58;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-heading h2 > span:first-child {
+  display: block;
+  width: 5px;
+  height: 32px;
+  background: #0879ed;
+  border-radius: 5px;
+}
+
+.section-heading a {
+  border: 1px solid #0879ed;
+  color: #0879ed;
+  padding: 7px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+
+.section-heading a:hover {
+  background: #0879ed;
+  color: white;
+}
+
+
+/* =========================================================
+   LATEST NEWS
+   ========================================================= */
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.news-card {
+  background: white;
   border-radius: 11px;
-  text-decoration: none;
-  color: #334155;
+  overflow: hidden;
+  border: 1px solid #e2e8f1;
+  box-shadow: 0 2px 7px rgba(15, 45, 80, 0.04);
+  transition: 0.2s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 18px rgba(15, 45, 80, 0.1);
+}
+
+.news-card > img {
+  width: 100%;
+  height: 165px;
+  object-fit: cover;
+}
+
+.news-content {
+  padding: 14px;
+}
+
+.news-category {
+  display: inline-block;
+  color: #0879ed;
+  font-size: 10px;
   font-weight: 800;
-  border: 1px solid #dce6ee;
-  transition: all 0.25s ease;
+  letter-spacing: 0.3px;
+  margin-bottom: 5px;
 }
 
-.category-grid a:hover {
-  color: #173b5f;
-  border-color: #8fbddd;
-  background: #f8fcff;
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(23, 59, 95, 0.08);
+.bike-category {
+  color: #6738d8;
 }
 
-/* ================================
-   LIST GRID
-   ================================ */
-
-.list-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 17px;
+.sports-category {
+  color: #ef8b00;
 }
 
-.list-grid > div {
-  background: #fff;
-  padding: 24px;
+.motorsport-category {
+  color: #e51b2e;
+}
+
+.news-content h3 {
+  color: #122b55;
+  font-size: 17px;
+  line-height: 1.3;
+  margin-bottom: 7px;
+}
+
+.news-content p {
+  color: #71809a;
+  font-size: 12px;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.news-meta {
+  border-top: 1px solid #edf0f5;
+  padding-top: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #7c8aa2;
+  font-size: 10px;
+}
+
+.news-meta a {
+  color: #0879ed;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   TRENDING
+   ========================================================= */
+
+.trending-section {
+  background: white;
   border-radius: 12px;
-  border: 1px solid #dce6ee;
-  transition: all 0.25s ease;
+  border: 1px solid #e3e9f2;
+  padding: 13px 14px;
+  align-self: start;
 }
 
-.list-grid > div:hover {
-  transform: translateY(-4px);
-  border-color: #9bc7e5;
-  box-shadow: 0 10px 25px rgba(23, 59, 95
+.trending-section .section-heading {
+  border-bottom: 1px solid #e8edf4;
+  margin-bottom: 0;
+}
+
+.trending-section .section-heading h2 {
+  font-size: 21px;
+}
+
+.trending-line {
+  background: #ed172b !important;
+}
+
+.trending-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.trending-item {
+  min-height: 80px;
+  display: grid;
+  grid-template-columns: 105px 1fr;
+  gap: 11px;
+  align-items: center;
+  border-bottom: 1px solid #e8edf4;
+  padding: 10px 0;
+}
+
+.trending-item:last-child {
+  border-bottom: none;
+}
+
+.trending-item img {
+  width: 105px;
+  height: 62px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.trending-item h4 {
+  font-size: 13px;
+  line-height: 1.35;
+  color: #172f5a;
+  margin-bottom: 5px;
+}
+
+.trending-item p {
+  color: #7c8aa1;
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   FEATURED SECTIONS
+   ========================================================= */
+
+.featured-section,
+.video-section {
+  width: 91%;
+  margin: 0 auto 35px;
+}
+
+.featured-card {
+  background: white;
+  border: 1px solid #e1e8f2;
+  border-radius: 13px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 45% 55%;
+  box-shadow: 0 2px 8px rgba(15, 45, 80, 0.04);
+}
+
+.featured-card > img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.featured-card > div {
+  padding: 28px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.featured-card h2 {
+  color: #102b58;
+  font-size: 24px;
+  line-height: 1.25;
+  margin: 4px 0 11px;
+}
+
+.featured-card p {
+  color: #71809a;
+  font-size: 14px;
+  line-height: 1.65;
+  margin-bottom: 17px;
+}
+
+.outline-button {
+  width: fit-content;
+  border: 1px solid #0879ed;
+  color: #0879ed;
+  padding: 9px 18px;
+  border-radius: 22px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.outline-button:hover {
+  background: #0879ed;
+  color: white;
+}
+
+
+/* =========================================================
+   VIDEOS
+   ========================================================= */
+
+.video-placeholder {
+  min-height: 220px;
+  border-radius: 13px;
+  background: #092957;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px;
+}
+
+.play-circle {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #ed172b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 13px;
+  font-size: 20px;
+}
+
+.video-placeholder h2 {
+  font-size: 23px;
+  margin-bottom: 5px;
+}
+
+.video-placeholder p {
+  color: #d5e3f5;
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer {
+  background: #061f46;
+  color: white;
+  margin-top: 45px;
+}
+
+.footer-content {
+  width: 91%;
+  margin: auto;
+  padding: 42px 0 35px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 45px;
+}
+
+.footer-brand h2 {
+  font-size: 27px;
+  letter-spacing: 1px;
+  margin-bottom: 2px;
+}
+
+.footer-brand h2 span {
+  color: #ed172b;
+}
+
+.footer-brand p {
+  color: #b8c9df;
+  font-size: 13px;
+  max-width: 430px;
+  margin-top: 7px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-links h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.footer-links a {
+  color: #b8c9df;
+  font-size: 13px;
+  transition: 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: white;
+  padding-left: 3px;
+}
+
+.copyright {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  text-align: center;
+  color: #aebfd5;
+  font-size: 11px;
+  padding: 15px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1150px) {
+
+  .main-nav {
+    gap: 14px;
+  }
+
+  .main-nav a {
+    font-size: 13px;
+  }
+
+  .logo-area {
+    width: 270px;
+  }
+
+  .logo-area img {
+    width: 255px;
+  }
+
+  .hero-overlay {
+    width: 65%;
+  }
+
+  .hero-overlay h1 {
+    font-size: 30px;
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE NAVIGATION
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .top-left span:last-child {
+    display: none;
+  }
+
+  .top-right > span {
+    display: none;
+  }
+
+  .search-box {
+    width: 230px;
+  }
+
+  .main-header {
+    min-height: 76px;
+  }
+
+  .logo-area {
+    width: 240px;
+  }
+
+  .logo-area img {
+    width: 225px;
+    max-height: 62px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .main-nav {
+    display: none;
+    position: absolute;
+    z-index: 100;
+    left: 0;
+    right: 0;
+    top: 119px;
+    background: white;
+    padding: 10px 5%;
+    box-shadow: 0 7px 15px rgba(0,0,0,0.12);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .main-nav.show {
+    display: flex;
+  }
+
+  .main-nav a {
+    height: auto;
+    padding: 12px 5px;
+    border-bottom: 1px solid #edf0f5;
+  }
+
+  .main-nav a.active::after {
+    display: none;
+  }
+
+  .hero-section {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-side {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .side-story {
+    grid-template-columns: 1fr;
+  }
+
+  .side-story img {
+    width: 100%;
+    height: 120px;
+  }
+
+  .content-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .top-bar {
+    padding: 0 4%;
+  }
+
+  .top-left {
+    font-size: 11px;
+  }
+
+  .search-box {
+    width: 170px;
+  }
+
+  .main-header {
+    padding: 0 4%;
+  }
+
+  .logo-area {
+    width: 205px;
+  }
+
+  .logo-area img {
+    width: 195px;
+  }
+
+  .main-nav {
+    top: 119px;
+  }
+
+  .breaking-wrapper {
+    width: 92%;
+  }
+
+  .breaking-title {
+    min-width: 105px;
+    font-size: 11px;
+  }
+
+  .breaking-news {
+    justify-content: flex-start;
+    overflow-x: auto;
+    font-size: 11px;
+  }
+
+  .hero-section,
+  .category-grid,
+  .content-wrapper,
+  .featured-section,
+  .video-section {
+    width: 92%;
+  }
+
+  .hero-main {
+    min-height: 400px;
+  }
+
+  .hero-image {
+    height: 400px;
+  }
+
+  .hero-overlay {
+    left: 20px;
+    right: 20px;
+    bottom: 22px;
+    width: auto;
+  }
+
+  .hero-overlay h1 {
+    font-size: 26px;
+  }
+
+  .hero-overlay p {
+    font-size: 12px;
+  }
+
+  .hero-side {
+    display: flex;
+  }
+
+  .side-story {
+    grid-template-columns: 105px 1fr;
+  }
+
+  .side-story img {
+    width: 105px;
+    height: 82px;
+  }
+
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .news-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .news-card > img {
+    height: 200px;
+  }
+
+  .featured-card {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-card > img {
+    height: 220px;
+  }
+
+  .featured-card > div {
+    padding: 22px;
+  }
+
+  .featured-card h2 {
+    font-size: 21px;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+}
+
+
+/* =========================================================
+   EXTRA SMALL DEVICES
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+  .top-right {
+    display: none;
+  }
+
+  .logo-area {
+    width: 190px;
+  }
+
+  .logo-area img {
+    width: 180px;
+  }
+
+  .hero-overlay h1 {
+    font-size: 23px;
+  }
+
+  .section-heading h2 {
+    font-size: 19px;
+  }
+
+  .category-card {
+    grid-template-columns: 95px 1fr;
+  }
+
+  .category-card > img {
+    width: 95px;
+  }
+
+}
