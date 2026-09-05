@@ -1,506 +1,224 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="KhabarDrive — Automotive, sports, motorsports news, reviews and guides.">
+  <title>KhabarDrive - Automobile, Bikes, Sports & Motorsport News</title>
 
-  <title>KhabarDrive | Automotive, Sports & Latest News</title>
+  <meta name="description" content="KhabarDrive brings the latest automobile, bike, sports and motorsport news, reviews, guides and updates.">
 
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
+<!-- ================= TOP BAR ================= -->
+<div class="top-bar">
+  <div class="top-left">
+    <span>📅 Tuesday, August 31, 2026</span>
+    <span>📍 Pakistan</span>
+  </div>
 
-  <div class="breaking">
-    <div class="container">
-      <b>Breaking:</b>
-      Latest updates from automobiles, sports and motorsports
+  <div class="top-right">
+    <span>f</span>
+    <span>𝕏</span>
+    <span>▶</span>
+    <span>◎</span>
+    <span>♪</span>
+
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search news, cars, bikes, sports...">
+      <button onclick="searchSite()">🔍</button>
     </div>
   </div>
+</div>
 
-  <div class="container nav">
 
-    <a class="brand" href="index.html">
+<!-- ================= HEADER ================= -->
+<header class="main-header">
 
+  <div class="logo-area">
+    <a href="index.html">
       <img src="logo.png" alt="KhabarDrive Logo">
-
-
     </a>
-
-    <button class="menu" onclick="toggleMenu()">☰</button>
-
-    <nav id="nav">
-      <a href="index.html">Home</a>
-      <a href="#latest">Latest News</a>
-      <a href="#cars">Cars</a>
-      <a href="#bikes">Bikes</a>
-      <a href="#sports">Sports</a>
-      <a href="#motorsport">Motorsports</a>
-      <a href="#guides">Guides</a>
-    </nav>
-
-    <button class="searchBtn" onclick="openSearch()">Search</button>
-
   </div>
+
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+  <nav class="main-nav" id="mainNav">
+
+    <a href="index.html" class="active">🏠 Home</a>
+
+    <a href="#automobile">🚗 Automobile</a>
+
+    <a href="#bikes">🏍️ Bikes</a>
+
+    <a href="#sports">🏆 Sports</a>
+
+    <a href="#motorsport">🏁 Motorsport</a>
+
+    <a href="car-buying-guide.html">📖 Guides</a>
+
+    <a href="#videos">▶ Videos</a>
+
+    <a href="about.html">ⓘ About</a>
+
+    <a href="contact.html">✉ Contact</a>
+
+  </nav>
 
 </header>
 
 
-<main id="home">
+<!-- ================= BREAKING NEWS ================= -->
+<section class="breaking-wrapper">
+
+  <div class="breaking-title">
+    ⚡ BREAKING
+  </div>
+
+  <div class="breaking-news">
+
+    <span>● PCB announces squad for next Test series</span>
+
+    <span>● Electric bikes sales surge in Pakistan</span>
+
+    <span>● F1 returns to Asia next month</span>
+
+    <span>● New car prices update 2026</span>
+
+  </div>
+
+</section>
 
 
-  <!-- HERO -->
+<!-- ================= HERO ================= -->
+<section class="hero-section">
 
-  <section class="hero container">
+  <div class="hero-main">
 
-    <div class="hero-main">
+    <img
+      src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=1600&q=85"
+      alt="Pakistan Cricket"
+      class="hero-image"
+    >
 
-      <span class="label">FEATURED</span>
+    <div class="hero-overlay">
+
+      <span class="category-badge sports-badge">
+        🏆 SPORTS
+      </span>
 
       <h1>
-        The Latest Automotive and Sports News, All in One Place
+        Pakistan Show Fightback in Thrilling Test Match
       </h1>
 
       <p>
-        Reliable and easy-to-understand information about cars,
-        bikes, cricket, football and motorsports.
+        Pakistan's bowling unit delivers an outstanding performance as
+        the team fights back with key wickets. Fans praise the team's
+        determination and spirit.
       </p>
 
-      <a class="button" href="#latest">
-        Read Latest News
+      <a href="cricket-statistics-guide.html" class="read-button">
+        Read Full Article →
       </a>
-
-    </div>
-
-
-    <aside class="hero-side">
-
-      <div class="mini">
-        <div>
-          <b>Automobiles</b>
-          <p>Reviews, features and buying guides</p>
-        </div>
-      </div>
-
-      <div class="mini">
-        <div>
-          <b>Sports</b>
-          <p>Latest news, results and analysis</p>
-        </div>
-      </div>
-
-      <div class="mini">
-        <div>
-          <b>Motorsports</b>
-          <p>Racing, drivers and technology</p>
-        </div>
-      </div>
-
-    </aside>
-
-  </section>
-
-
-  <!-- LATEST NEWS -->
-
-  <section class="container section" id="latest">
-
-    <div class="section-title">
-
-      <h2>Latest News</h2>
-
-      <a href="#latest">View All →</a>
-
-    </div>
-
-
-    <div class="cards">
-
-
-      <!-- AUTOMOBILE ARTICLE -->
-
-      <article class="card">
-
-        <div class="photo">
-          Automobiles
-        </div>
-
-        <div class="card-body">
-
-          <span>Automobiles</span>
-
-          <h3>
-            What to Check Before Buying a New Car
-          </h3>
-
-          <p>
-            Important information about budget, fuel economy,
-            safety, maintenance and other factors to consider
-            before buying a car.
-          </p>
-
-          <a href="car-buying-guide.html">
-            Read Full Story →
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- BIKE ARTICLE -->
-
-      <article class="card">
-
-        <div class="photo">
-          Bikes
-        </div>
-
-        <div class="card-body">
-
-          <span>Bikes</span>
-
-          <h3>
-            How to Choose the Right Bike for Daily Use
-          </h3>
-
-          <p>
-            A practical guide covering fuel economy, comfort,
-            performance and maintenance.
-          </p>
-
-          <a href="bike-buying-guide.html">
-  Read Full Story →
-</a>
-        </div>
-
-      </article>
-
-
-      <!-- CRICKET ARTICLE -->
-
-      <article class="card">
-
-        <div class="photo">
-          Cricket
-        </div>
-
-        <div class="card-body">
-
-          <span>Cricket</span>
-
-          <h3>
-            Understanding Important Cricket Match Statistics
-          </h3>
-
-          <p>
-            Learn how run rate, wickets, overs and player
-            performance can help you understand a cricket match.
-          </p>
-
-          <a href="cricket-statistics-guide.html">
-  Read Full Story →
-</a>
-
-        </div>
-
-      </article>
-
-    </div>
-
-  </section>
-
-
-  <!-- CARS -->
-
-  <section class="section band" id="cars">
-
-    <div class="container">
-
-      <div class="section-title">
-
-        <h2>Automobiles</h2>
-
-        <a href="#cars">More →</a>
-
-      </div>
-
-      <div class="category-grid">
-
-        <a href="#">Car News</a>
-        <a href="#">Reviews</a>
-        <a href="#">Prices & Specs</a>
-        <a href="#">Comparisons</a>
-        <a href="#">Electric Cars</a>
-        <a href="#">Maintenance</a>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- BIKES -->
-
-  <section class="container section" id="bikes">
-
-    <div class="section-title">
-
-      <h2>Bikes</h2>
-
-      <a href="#bikes">More →</a>
-
-    </div>
-
-    <div class="list-grid">
-
-      <div>
-        <b>Bike Reviews</b>
-        <p>
-          Features, specifications and everyday-use information
-          about bike models.
-        </p>
-      </div>
-
-      <div>
-        <b>Bike Tips</b>
-        <p>
-          Useful information about maintenance, fuel economy
-          and everyday riding.
-        </p>
-      </div>
-
-      <div>
-        <b>Comparisons</b>
-        <p>
-          Easy comparisons of important features between
-          different bike models.
-        </p>
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- SPORTS -->
-
-  <section class="section band" id="sports">
-
-    <div class="container">
-
-      <div class="section-title">
-
-        <h2>Sports</h2>
-
-        <a href="#sports">More →</a>
-
-      </div>
-
-      <div class="category-grid">
-
-        <a href="#">Cricket</a>
-        <a href="#">Football</a>
-        <a href="#">Sports News</a>
-        <a href="#">Players</a>
-        <a href="#">Schedules</a>
-        <a href="#">Results</a>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- MOTORSPORTS -->
-
-  <section class="container section" id="motorsport">
-
-    <div class="section-title">
-
-      <h2>Motorsports</h2>
-
-      <a href="#motorsport">More →</a>
-
-    </div>
-
-    <div class="feature">
-
-      <div>
-
-        <span>Motorsport</span>
-
-        <h3>
-          The World of Racing: Cars, Drivers and Technology
-        </h3>
-
-        <p>
-          Information and guides about racing, motorsport
-          technology, drivers and cars.
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- GUIDES -->
-
-  <section class="section band" id="guides">
-
-    <div class="container">
-
-      <div class="section-title">
-
-        <h2>Reviews & Guides</h2>
-
-      </div>
-
-      <div class="notice">
-
-        <h3>Original & Useful Content</h3>
-
-        <p>
-          KhabarDrive aims to provide clear, useful and original
-          information about automobiles, bikes, sports and motorsports.
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- INFORMATION PAGES -->
-
-  <section class="container section info-pages">
-
-    <div>
-
-      <h2>About Us</h2>
-
-      <p>
-        KhabarDrive is an information platform covering
-        automobiles, sports and motorsports through news,
-        reviews and useful guides.
-      </p>
-
-      <a href="about.html">Read More →</a>
-
-    </div>
-
-
-    <div>
-
-      <h2>Contact Us</h2>
-
-      <p>
-        Have a question or suggestion? Visit our Contact page
-        to get in touch.
-      </p>
-
-      <a href="contact.html">Contact Us →</a>
-
-    </div>
-
-
-    <div>
-
-      <h2>Privacy Policy</h2>
-
-      <p>
-        Learn how KhabarDrive handles privacy, cookies and
-        user information.
-      </p>
-
-      <a href="privacy.html">Read Privacy Policy →</a>
-
-    </div>
-
-
-    <div>
-
-      <h2>Terms & Conditions</h2>
-
-      <p>
-        Read the terms and conditions for using the
-        KhabarDrive website.
-      </p>
-
-      <a href="terms.html">Read Terms →</a>
-
-    </div>
-
-  </section>
-
-</main>
-
-
-<!-- FOOTER -->
-
-<footer>
-
-  <div class="container footer">
-
-    <div class="brand">
-
-      <img
-        src="logo.png"
-        alt="KhabarDrive Logo"
-        style="height:45px;width:auto;display:inline-block;"
-      >
-
-      <small style="display:block;">
-        News That Moves You
-      </small>
-
-    </div>
-
-    <p>
-      © 2026 KhabarDrive — All rights reserved.
-    </p>
-
-    <div class="footer-links">
-
-      <a href="about.html">About Us</a>
-      <a href="contact.html">Contact Us</a>
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="terms.html">Terms & Conditions</a>
 
     </div>
 
   </div>
 
-</footer>
+
+  <!-- RIGHT SIDE STORIES -->
+  <div class="hero-side">
+
+    <a href="car-buying-guide.html" class="side-story">
+
+      <img
+        src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=500&q=80"
+        alt="Automobile"
+      >
+
+      <div>
+        <span class="small-category automobile-text">
+          🔵 AUTOMOBILE
+        </span>
+
+        <h3>
+          New Toyota Corolla 2026 Launched in Pakistan
+        </h3>
+
+        <small>◷ Aug 31, 2026</small>
+      </div>
+
+    </a>
 
 
-<!-- SEARCH -->
+    <a href="bike-buying-guide.html" class="side-story">
 
-<div id="search" class="searchBox">
+      <img
+        src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=500&q=80"
+        alt="Motorcycle"
+      >
 
-  <button onclick="closeSearch()">✕</button>
+      <div>
+        <span class="small-category bikes-text">
+          🟣 BIKES
+        </span>
 
-  <input
-    id="searchInput"
-    oninput="searchSite()"
-    placeholder="Search news..."
-  >
+        <h3>
+          Top 5 Bikes for Students in 2026
+        </h3>
 
-  <div id="searchResult"></div>
+        <small>◷ Aug 30, 2026</small>
+      </div>
 
-</div>
+    </a>
 
 
-<script src="script.js"></script>
+    <a href="#motorsport" class="side-story">
 
-</body>
-</html>
+      <img
+        src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=500&q=80"
+        alt="Motorsport"
+      >
+
+      <div>
+        <span class="small-category motorsport-text">
+          🔴 MOTORSPORT
+        </span>
+
+        <h3>
+          F1 Returns to Asia: Full Schedule
+        </h3>
+
+        <small>◷ Aug 30, 2026</small>
+      </div>
+
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- ================= CATEGORY CARDS ================= -->
+<section class="category-grid" id="categories">
+
+  <a href="#automobile" class="category-card">
+
+    <img
+      src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=500&q=80"
+      alt="Automobile"
+    >
+
+    <div class="category-content">
+
+      <div class="category-icon blue-icon">🚗</div>
+
+      <div>
+        <h3>Automobile</h3>
+        <p>Car Reviews, News & Updates</p>
+      </div>
+
+      <
