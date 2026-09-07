@@ -1,1 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Automobile News & Reviews | KhabarDrive</title>
+
+  <meta name="description" content="Latest automobile news, car reviews, buying advice and useful car guides from KhabarDrive.">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    html,
+    body {
+      height: auto !important;
+      min-height: 100% !important;
+      overflow-x: hidden !important;
+      overflow-y: auto !important;
+    }
+
+    .category-page {
+      width: 91%;
+      margin: 28px auto 45px;
+    }
+
+    .category-intro {
+      background: white;
+      border: 1px solid #e1e8f2;
+      border-radius: 13px;
+      padding: 28px;
+      margin-bottom: 22px;
+    }
+
+    .category-intro h1 {
+      color: #102b58;
+      font-size: 32px;
+      margin-bottom: 7px;
+    }
+
+    .category-intro p {
+      color: #71809a;
+      font-size: 14px;
+    }
+
+    .category-page .news-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 600px) {
+      .category-page {
+        width: 92%;
+      }
+
+      .category-page .news-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+
+<div class="top-bar">
+
+  <div class="top-left">
+    <span>📅 September 7, 2026</span>
+    <span>📍 Pakistan</span>
+  </div>
+
+  <div class="top-right">
+    <span>f</span>
+    <span>𝕏</span>
+    <span>▶</span>
+    <span>◎</span>
+    <span>♪</span>
+
+    <div class="search-box">
+      <input
+        type="text"
+        placeholder="Search news, cars, bikes, sports..."
+      >
+      <button>🔍</button>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- HEADER -->
+
+<header class="main-header">
+
+  <div class="logo-area">
+
+    <a href="index.html">
+      <img src="logo.png" alt="KhabarDrive Logo">
+    </a>
+
+  </div>
+
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+  <nav class="main-nav" id="nav">
+
+    <a href="index.html">🏠 Home</a>
+
+    <a href="automobile.html" class="active">
+      🚗 Automobile
+    </a>
+
+    <a href="bikes.html">
+      🏍️ Bikes
+    </a>
+
+    <a href="sports.html">
+      🏆 Sports
+    </a>
+
+    <a href="motorsport.html">
+      🏁 Motorsport
+    </a>
+
+    <a href="guides.html">
+      📖 Guides
+    </a>
+
+    <a href="index.html#videos">
+      ▶ Videos
+    </a>
+
+    <a href="about.html">
+      ⓘ About
+    </a>
+
+    <a href="contact.html">
+      ✉ Contact
+    </a>
+
+  </nav>
+
+</header>
+
+
+<!-- AUTOMOBILE CONTENT -->
+
+<main class="category-page">
+
+  <div class="category-intro">
+
+    <h1>Automobile</h1>
+
+    <p>
+      Latest car news, reviews, buying advice, maintenance tips
+      and useful automobile information.
+    </p>
+
+  </div>
+
+
+  <div class="news-grid">
+
+
+    <!-- ARTICLE 1 -->
+
+    <article class="news-card">
+
+      <img
+        src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=900&q=80"
+        alt="Car buying guide"
+      >
+
+      <div class="news-content">
+
+        <span class="news-category">
+          AUTOMOBILE
+        </span>
+
+        <h3>
+          Things You Should Check Before Buying a New Car
+        </h3>
+
+        <p>
+          Learn the most important factors to consider before
+          buying a new car, including safety, comfort, fuel
+          economy and maintenance.
+        </p>
+
+        <div class="news-meta">
+
+          <span>Car Guide</span>
+
+          <a href="car-buying-guide.html">
+            Read More →
+          </a>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- ARTICLE 2 -->
+
+    <article class="news-card">
+
+      <img
+        src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=900&q=80"
+        alt="Modern car"
+      >
+
+      <div class="news-content">
+
+        <span class="news-category">
+          AUTOMOBILE
+        </span>
+
+        <h3>
+          What Makes a Modern Car Better for Daily Driving?
+        </h3>
+
+        <p>
+          Explore the features that can make a modern car
+          comfortable, practical and suitable for everyday
+          driving.
+        </p>
+
+        <div class="news-meta">
+
+          <span>Automobile</span>
+
+          <a href="car-daily-driving.html">
+            Read More →
+          </a>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- ARTICLE 3 -->
+
+    <article class="news-card">
+
+      <img
+        src="https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=900&q=80"
+        alt="Car maintenance"
+      >
+
+      <div class="news-content">
+
+        <span class="news-category">
+          AUTOMOBILE
+        </span>
+
+        <h3>
+          Why Regular Car Maintenance Matters
+        </h3>
+
+        <p>
+          Understand the basic maintenance checks that help
+          keep a car reliable and ready for everyday use.
+        </p>
+
+        <div class="news-meta">
+
+          <span>Maintenance</span>
+
+          <a href="car-maintenance-guide.html">
+            Read More →
+          </a>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- ARTICLE 4 -->
+
+    <article class="news-card">
+
+      <img
+        src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=900&q=80"
+        alt="Car safety"
+      >
+
+      <div class="news-content">
+
+        <span class="news-category">
+          AUTOMOBILE
+        </span>
+
+        <h3>
+          How Modern Car Safety Features Protect Passengers
+        </h3>
+
+        <p>
+          A simple look at airbags, ABS, stability control and
+          other important vehicle safety technologies.
+        </p>
+
+        <div class="news-meta">
+
+          <span>Safety</span>
+
+          <a href="car-safety-features.html">
+            Read More →
+          </a>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+  </div>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+  <div class="footer-content">
+
+    <div class="footer-brand">
+
+      <h2>
+        KHABAR<span>DRIVE</span>
+      </h2>
+
+      <p>
+        KhabarDrive is an independent information platform
+        covering automobiles, bikes, sports and motorsport.
+      </p>
+
+      <p>
+        News That Moves You.
+      </p>
+
+    </div>
+
+
+    <div class="footer-links">
+
+      <h3>Quick Links</h3>
+
+      <a href="index.html">Home</a>
+
+      <a href="automobile.html">
+        Automobile
+      </a>
+
+      <a href="bikes.html">
+        Bikes
+      </a>
+
+      <a href="sports.html">
+        Sports
+      </a>
+
+      <a href="motorsport.html">
+        Motorsport
+      </a>
+
+    </div>
+
+
+    <div class="footer-links">
+
+      <h3>Information</h3>
+
+      <a href="about.html">
+        About Us
+      </a>
+
+      <a href="contact.html">
+        Contact Us
+      </a>
+
+      <a href="privacy.html">
+        Privacy Policy
+      </a>
+
+      <a href="terms.html">
+        Terms & Conditions
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <div class="copyright">
+
+    © 2026 KhabarDrive. All Rights Reserved.
+    &nbsp; | &nbsp;
+    News That Moves You
+
+  </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
