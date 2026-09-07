@@ -10,7 +10,6 @@
 
   <link rel="stylesheet" href="style.css">
 
-  <!-- Scroll Fix -->
   <style>
     html,
     body {
@@ -19,16 +18,14 @@
       overflow-x: hidden !important;
       overflow-y: auto !important;
     }
-
-    body {
-      max-height: none !important;
-    }
   </style>
 </head>
 
 <body>
 
-<!-- ================= TOP BAR ================= -->
+<!-- =====================================================
+     TOP BAR
+===================================================== -->
 
 <div class="top-bar">
 
@@ -38,6 +35,7 @@
   </div>
 
   <div class="top-right">
+
     <span>f</span>
     <span>𝕏</span>
     <span>▶</span>
@@ -45,31 +43,43 @@
     <span>♪</span>
 
     <div class="search-box">
+
       <input
         type="text"
         id="searchInput"
         placeholder="Search news, cars, bikes, sports..."
       >
+
       <button onclick="searchSite()">🔍</button>
+
     </div>
+
   </div>
 
 </div>
 
 
-<!-- ================= HEADER ================= -->
+<!-- =====================================================
+     MAIN HEADER
+===================================================== -->
 
 <header class="main-header">
 
   <div class="logo-area">
+
     <a href="index.html">
       <img src="logo.png" alt="KhabarDrive Logo">
     </a>
+
   </div>
+
 
   <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
-  <nav class="main-nav" id="mainNav">
+
+  <!-- IMPORTANT: script.js expects id="nav" -->
+
+  <nav class="main-nav" id="nav">
 
     <a href="index.html" class="active">🏠 Home</a>
 
@@ -94,7 +104,9 @@
 </header>
 
 
-<!-- ================= BREAKING NEWS ================= -->
+<!-- =====================================================
+     BREAKING NEWS
+===================================================== -->
 
 <section class="breaking-wrapper">
 
@@ -106,20 +118,23 @@
 
     <span>● Pakistan cricket team prepares for upcoming series</span>
 
-    <span>● New car prices continue to change in Pakistan</span>
+    <span>● New car prices update in Pakistan</span>
 
-    <span>● Electric bikes gain popularity among Pakistani riders</span>
+    <span>● Electric bike demand continues to grow</span>
 
-    <span>● Motorsport fans prepare for another exciting F1 weekend</span>
+    <span>● Formula 1 racing action continues</span>
 
   </div>
 
 </section>
 
 
-<!-- ================= HERO SECTION ================= -->
+<!-- =====================================================
+     HERO
+===================================================== -->
 
-<section class="hero-section">
+<section class="hero-section" id="home">
+
 
   <!-- MAIN HERO -->
 
@@ -127,8 +142,497 @@
 
     <img
       src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=1600&q=85"
-      alt="Pakistan Cricket"
+      alt="Cricket Stadium"
       class="hero-image"
     >
 
+
     <div class="hero-overlay">
+
+      <span class="category-badge sports-badge">
+        🏆 SPORTS
+      </span>
+
+      <h1>
+        How to Understand Important Cricket Match Statistics
+      </h1>
+
+      <p>
+        A simple guide to understanding important cricket statistics,
+        match numbers and performance indicators every fan should know.
+      </p>
+
+      <a
+        href="cricket-statistics-guide.html"
+        class="read-button"
+      >
+        Read Full Article →
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <!-- RIGHT SIDE STORIES -->
+
+  <div class="hero-side">
+
+
+    <a
+      href="car-buying-guide.html"
+      class="side-story"
+    >
+
+      <img
+        src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=500&q=80"
+        alt="Automobile"
+      >
+
+      <div>
+
+        <span class="small-category automobile-text">
+          🔵 AUTOMOBILE
+        </span>
+
+        <h3>
+          Things You Should Check Before Buying a New Car
+        </h3>
+
+        <small>◷ September 7, 2026</small>
+
+      </div>
+
+    </a>
+
+
+    <a
+      href="bike-buying-guide.html"
+      class="side-story"
+    >
+
+      <img
+        src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=500&q=80"
+        alt="Motorcycle"
+      >
+
+      <div>
+
+        <span class="small-category bikes-text">
+          🟣 BIKES
+        </span>
+
+        <h3>
+          Important Things to Consider When Buying a Daily-Use Bike
+        </h3>
+
+        <small>◷ September 6, 2026</small>
+
+      </div>
+
+    </a>
+
+
+    <a
+      href="#motorsport"
+      class="side-story"
+    >
+
+      <img
+        src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=500&q=80"
+        alt="Motorsport"
+      >
+
+      <div>
+
+        <span class="small-category motorsport-text">
+          🔴 MOTORSPORT
+        </span>
+
+        <h3>
+          Formula 1: What Makes Motorsport So Fast?
+        </h3>
+
+        <small>◷ September 5, 2026</small>
+
+      </div>
+
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     CATEGORY CARDS
+===================================================== -->
+
+<section class="category-grid" id="categories">
+
+
+  <!-- AUTOMOBILE -->
+
+  <a href="#automobile" class="category-card">
+
+    <img
+      src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=600&q=80"
+      alt="Automobile"
+    >
+
+    <div class="category-content">
+
+      <div class="category-icon blue-icon">
+        🚗
+      </div>
+
+      <div>
+
+        <h3>Automobile</h3>
+
+        <p>
+          Car Reviews, News & Updates
+        </p>
+
+      </div>
+
+      <span class="arrow">→</span>
+
+    </div>
+
+  </a>
+
+
+  <!-- BIKES -->
+
+  <a href="#bikes" class="category-card">
+
+    <img
+      src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=600&q=80"
+      alt="Bikes"
+    >
+
+    <div class="category-content">
+
+      <div class="category-icon cyan-icon">
+        🏍️
+      </div>
+
+      <div>
+
+        <h3>Bikes</h3>
+
+        <p>
+          Bike News, Reviews & Guides
+        </p>
+
+      </div>
+
+      <span class="arrow">→</span>
+
+    </div>
+
+  </a>
+
+
+  <!-- SPORTS -->
+
+  <a href="#sports" class="category-card">
+
+    <img
+      src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=600&q=80"
+      alt="Sports"
+    >
+
+    <div class="category-content">
+
+      <div class="category-icon red-icon">
+        🏆
+      </div>
+
+      <div>
+
+        <h3>Sports</h3>
+
+        <p>
+          Cricket & Sports Updates
+        </p>
+
+      </div>
+
+      <span class="arrow">→</span>
+
+    </div>
+
+  </a>
+
+
+  <!-- MOTORSPORT -->
+
+  <a href="#motorsport" class="category-card">
+
+    <img
+      src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=600&q=80"
+      alt="Motorsport"
+    >
+
+    <div class="category-content">
+
+      <div class="category-icon orange-icon">
+        🏁
+      </div>
+
+      <div>
+
+        <h3>Motorsport</h3>
+
+        <p>
+          F1, Racing & Motorsport News
+        </p>
+
+      </div>
+
+      <span class="arrow">→</span>
+
+    </div>
+
+  </a>
+
+</section>
+
+
+<!-- =====================================================
+     MAIN CONTENT
+===================================================== -->
+
+<div class="content-wrapper">
+
+
+  <!-- LATEST NEWS -->
+
+  <main>
+
+    <div class="section-heading">
+
+      <h2>
+        <span></span>
+        Latest News
+      </h2>
+
+      <a href="#categories">
+        View All →
+      </a>
+
+    </div>
+
+
+    <div class="news-grid">
+
+
+      <!-- NEWS 1 -->
+
+      <article class="news-card">
+
+        <img
+          src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=700&q=80"
+          alt="Car"
+        >
+
+        <div class="news-content">
+
+          <span class="news-category">
+            AUTOMOBILE
+          </span>
+
+          <h3>
+            Things You Should Check Before Buying a New Car
+          </h3>
+
+          <p>
+            Learn the most important things to check before
+            purchasing a new car for daily use.
+          </p>
+
+          <div class="news-meta">
+
+            <span>◷ September 7, 2026</span>
+
+            <a href="car-buying-guide.html">
+              Read More →
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- NEWS 2 -->
+
+      <article class="news-card">
+
+        <img
+          src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=700&q=80"
+          alt="Bike"
+        >
+
+        <div class="news-content">
+
+          <span class="news-category bike-category">
+            BIKES
+          </span>
+
+          <h3>
+            Important Things to Consider When Buying a Daily-Use Bike
+          </h3>
+
+          <p>
+            A practical guide covering comfort, fuel economy,
+            maintenance and everyday bike usage.
+          </p>
+
+          <div class="news-meta">
+
+            <span>◷ September 6, 2026</span>
+
+            <a href="bike-buying-guide.html">
+              Read More →
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- NEWS 3 -->
+
+      <article class="news-card">
+
+        <img
+          src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=700&q=80"
+          alt="Cricket"
+        >
+
+        <div class="news-content">
+
+          <span class="news-category sports-category">
+            SPORTS
+          </span>
+
+          <h3>
+            How to Understand Important Cricket Match Statistics
+          </h3>
+
+          <p>
+            Understand runs, wickets, strike rate, economy rate
+            and other important cricket statistics.
+          </p>
+
+          <div class="news-meta">
+
+            <span>◷ September 5, 2026</span>
+
+            <a href="cricket-statistics-guide.html">
+              Read More →
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- NEWS 4 -->
+
+      <article class="news-card">
+
+        <img
+          src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=700&q=80"
+          alt="Motorsport"
+        >
+
+        <div class="news-content">
+
+          <span class="news-category motorsport-category">
+            MOTORSPORT
+          </span>
+
+          <h3>
+            Formula 1: What Makes Motorsport So Fast?
+          </h3>
+
+          <p>
+            Explore the technology, engineering and driving skills
+            behind modern Formula 1 racing.
+          </p>
+
+          <div class="news-meta">
+
+            <span>◷ September 5, 2026</span>
+
+            <a href="#motorsport">
+              Read More →
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+  </main>
+
+
+  <!-- =================================================
+       TRENDING
+  ================================================= -->
+
+  <aside class="trending-section">
+
+    <div class="section-heading">
+
+      <h2>
+        <span class="trending-line"></span>
+        Trending
+      </h2>
+
+    </div>
+
+
+    <div class="trending-list">
+
+
+      <a href="#automobile" class="trending-item">
+
+        <img
+          src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=500&q=80"
+          alt="Car"
+        >
+
+        <div>
+
+          <h4>
+            What Makes a Modern Car Better for Daily Driving?
+          </h4>
+
+          <p>
+            Automobile
+          </p>
+
+        </div>
+
+      </a>
+
+
+      <a href="#bikes" class="trending-item">
+
+        <img
+          src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=500&q=80"
+          alt="Motorbike
