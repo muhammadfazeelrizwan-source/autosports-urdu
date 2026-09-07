@@ -9,14 +9,31 @@
   <meta name="description" content="KhabarDrive brings the latest automobile, bike, sports and motorsport news, reviews, guides and updates.">
 
   <link rel="stylesheet" href="style.css">
+
+  <!-- Scroll Fix -->
+  <style>
+    html,
+    body {
+      height: auto !important;
+      min-height: 100% !important;
+      overflow-x: hidden !important;
+      overflow-y: auto !important;
+    }
+
+    body {
+      max-height: none !important;
+    }
+  </style>
 </head>
 
 <body>
 
 <!-- ================= TOP BAR ================= -->
+
 <div class="top-bar">
+
   <div class="top-left">
-    <span>📅 Tuesday, August 31, 2026</span>
+    <span>📅 Monday, September 7, 2026</span>
     <span>📍 Pakistan</span>
   </div>
 
@@ -28,14 +45,20 @@
     <span>♪</span>
 
     <div class="search-box">
-      <input type="text" id="searchInput" placeholder="Search news, cars, bikes, sports...">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search news, cars, bikes, sports..."
+      >
       <button onclick="searchSite()">🔍</button>
     </div>
   </div>
+
 </div>
 
 
 <!-- ================= HEADER ================= -->
+
 <header class="main-header">
 
   <div class="logo-area">
@@ -72,6 +95,7 @@
 
 
 <!-- ================= BREAKING NEWS ================= -->
+
 <section class="breaking-wrapper">
 
   <div class="breaking-title">
@@ -80,21 +104,24 @@
 
   <div class="breaking-news">
 
-    <span>● PCB announces squad for next Test series</span>
+    <span>● Pakistan cricket team prepares for upcoming series</span>
 
-    <span>● Electric bikes sales surge in Pakistan</span>
+    <span>● New car prices continue to change in Pakistan</span>
 
-    <span>● F1 returns to Asia next month</span>
+    <span>● Electric bikes gain popularity among Pakistani riders</span>
 
-    <span>● New car prices update 2026</span>
+    <span>● Motorsport fans prepare for another exciting F1 weekend</span>
 
   </div>
 
 </section>
 
 
-<!-- ================= HERO ================= -->
+<!-- ================= HERO SECTION ================= -->
+
 <section class="hero-section">
+
+  <!-- MAIN HERO -->
 
   <div class="hero-main">
 
@@ -105,120 +132,3 @@
     >
 
     <div class="hero-overlay">
-
-      <span class="category-badge sports-badge">
-        🏆 SPORTS
-      </span>
-
-      <h1>
-        Pakistan Show Fightback in Thrilling Test Match
-      </h1>
-
-      <p>
-        Pakistan's bowling unit delivers an outstanding performance as
-        the team fights back with key wickets. Fans praise the team's
-        determination and spirit.
-      </p>
-
-      <a href="cricket-statistics-guide.html" class="read-button">
-        Read Full Article →
-      </a>
-
-    </div>
-
-  </div>
-
-
-  <!-- RIGHT SIDE STORIES -->
-  <div class="hero-side">
-
-    <a href="car-buying-guide.html" class="side-story">
-
-      <img
-        src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=500&q=80"
-        alt="Automobile"
-      >
-
-      <div>
-        <span class="small-category automobile-text">
-          🔵 AUTOMOBILE
-        </span>
-
-        <h3>
-          New Toyota Corolla 2026 Launched in Pakistan
-        </h3>
-
-        <small>◷ Aug 31, 2026</small>
-      </div>
-
-    </a>
-
-
-    <a href="bike-buying-guide.html" class="side-story">
-
-      <img
-        src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=500&q=80"
-        alt="Motorcycle"
-      >
-
-      <div>
-        <span class="small-category bikes-text">
-          🟣 BIKES
-        </span>
-
-        <h3>
-          Top 5 Bikes for Students in 2026
-        </h3>
-
-        <small>◷ Aug 30, 2026</small>
-      </div>
-
-    </a>
-
-
-    <a href="#motorsport" class="side-story">
-
-      <img
-        src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=500&q=80"
-        alt="Motorsport"
-      >
-
-      <div>
-        <span class="small-category motorsport-text">
-          🔴 MOTORSPORT
-        </span>
-
-        <h3>
-          F1 Returns to Asia: Full Schedule
-        </h3>
-
-        <small>◷ Aug 30, 2026</small>
-      </div>
-
-    </a>
-
-  </div>
-
-</section>
-
-
-<!-- ================= CATEGORY CARDS ================= -->
-<section class="category-grid" id="categories">
-
-  <a href="#automobile" class="category-card">
-
-    <img
-      src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=500&q=80"
-      alt="Automobile"
-    >
-
-    <div class="category-content">
-
-      <div class="category-icon blue-icon">🚗</div>
-
-      <div>
-        <h3>Automobile</h3>
-        <p>Car Reviews, News & Updates</p>
-      </div>
-
-      <
